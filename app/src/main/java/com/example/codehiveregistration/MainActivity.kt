@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         var etphone = findViewById<EditText>(R.id.etPhone)
         var btnRegister = findViewById<Button>(R.id.btnRegister)
 
-        var nationalities = arrayOf("Kenya", "Uganda", "Rwanda", "SouthSudan")
+        var nationalities = arrayOf("Kenyan", "Ugandan", "Rwandan", "South Sudanese")
         var nationalitiesAdapter =
             ArrayAdapter(baseContext, android.R.layout.simple_spinner_item, nationalities)
         nationalitiesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 name = name,
                 phoneNumber = phone_number,
                 email = email,
-                nationality = nationality,
+                nationality = nationality.toUpperCase(),
                 dateOfBirth = date_of_birth,
                 password = password
             )
@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(baseContext,"Registration Successful",Toast.LENGTH_LONG).show()
                         var intent = Intent(baseContext, LoginActivity::class.java)
                         startActivity(intent)
+
 
                     }
                     else{
