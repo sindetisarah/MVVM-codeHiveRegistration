@@ -66,10 +66,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
-            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="email" />
+            android:backgroundTint="@color/white"
+            android:hint="email"
+            android:inputType="textWebEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -94,10 +95,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
-            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:backgroundTint="@color/white"
+            android:hint="Password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
