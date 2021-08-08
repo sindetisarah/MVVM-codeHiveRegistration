@@ -1,20 +1,23 @@
 package com.example.codehiveregistration.api
 
-import com.example.codehiveregistration.models.LoginRequest
-import com.example.codehiveregistration.models.LoginResponse
-import com.example.codehiveregistration.models.RegistrationRequest
-import com.example.codehiveregistration.models.RegistrationResponse
+import com.example.codehiveregistration.models.*
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface ApiInterface
 {
     @POST("/student/register")
-    fun registerStudent(@Body registrationRequest: RegistrationRequest):Call<RegistrationResponse>
+    suspend fun registerStudent(@Body registrationRequest: RegistrationRequest):Response<RegistrationResponse>
 
     @POST("/students/login")
-    fun loginStudent(@Body logInRequest:LoginRequest): Call<LoginResponse>
+    suspend fun loginStudent(@Body logInRequest:LoginRequest): Response<LoginResponse>
+
+    @GET("/courses")
+    suspend fun studentCourses(@Header("Authorization") token: String): Response<List<CourseResponse>>
 
 
 }

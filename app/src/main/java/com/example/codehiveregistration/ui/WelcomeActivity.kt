@@ -1,9 +1,10 @@
-package com.example.codehiveregistration
+package com.example.codehiveregistration.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.codehiveregistration.R
 import com.example.codehiveregistration.models.Course
 import com.example.codehiveregistration.models.CoursesAdapter
 
